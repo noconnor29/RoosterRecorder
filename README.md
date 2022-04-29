@@ -2,9 +2,9 @@
 Project to monitor and analyze loud sounds (ex. neighborhood roosters)
 
 ## Objectives
- - automatically and accurately distinguish target sounds from background noise
- - log data to create statistics about event frequency 
- - use data and statistics to generate trends and charts
+ - [X] automatically and accurately distinguish target sounds from background noise
+ - [ ] log data to create statistics about event frequency 
+ - [ ] use data and statistics to generate trends and charts
 
 ## Requirements
  - Raspberry Pi 3B+ (64-bit, more RAM is better)
