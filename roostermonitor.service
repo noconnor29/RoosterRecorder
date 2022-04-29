@@ -3,11 +3,10 @@
 
 [Unit]
 Description=Monitor to detect rooster crows
-Requires=network.target sound.target
-After=network.target sound.target
+After=network-online.target sound.target
 
 [Service]
-ExecStart=/usr/bin/python3 /home/pi/rooster_recorder/rooster_recorder.py
+ExecStart=/usr/bin/python3 /home/pi/rooster_recorder/monitor.py
 Restart=always
 RestartSec=10
 
