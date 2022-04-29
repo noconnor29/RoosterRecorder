@@ -21,7 +21,7 @@ Project to monitor and analyze loud sounds (ex. neighborhood roosters)
    - v2: create connector to push events to logging and analytics service
 
 ## Acknowledgements
- - This project would not have been possible without the previous work and detailed instructions of Fabio Manganiello
+ - This project would not have been possible without the previous work and detailed instructions of [Fabio Manganiello](https://fabiomanganiello.com/)
    - https://github.com/BlackLight/micmon
    - [Create your own smart baby monitor with a RaspberryPi and Tensorflow](https://towardsdatascience.com/create-your-own-smart-baby-monitor-with-a-raspberrypi-and-tensorflow-5b25713410ca)
 
