@@ -16,10 +16,11 @@ audio_device = 'plughw:1,0'  # Get list of recognized input devices with arecord
 with AudioDevice(audio_system, device=audio_device) as source:
     for sample in source:
         now = datetime.now(tz = tz.tzlocal())
-        dt_string = now.strftime("%m-%d-%Y %H:%M:%S") 
+        dt_string = now.strftime("%m-%d-%Y %H:%M:%S\n") 
         source.pause()  # Pause recording while we process the frame
         prediction = model.predict(sample)
         if prediction == "positive":
-            print(prediction, dt_string)
+            with oprn(os.path.join(model_dir, "logs", str(date + ".log")), "a") as file:
+                file.write(str(prediction + " " + dt_string))
         time.sleep(3) # Detection cooldown
         source.resume() # Resume recording
