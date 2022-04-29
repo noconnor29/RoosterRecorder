@@ -18,6 +18,7 @@ with AudioDevice(audio_system, device=audio_device) as source:
     for sample in source:
         now = datetime.now(tz = tz.tzlocal())
         dt_string = now.strftime("%m-%d-%Y %H:%M:%S\n") 
+        date = now.strftime("%m-%d-%Y")
         source.pause()  # Pause recording while we process the frame
         prediction = model.predict(sample)
         if prediction == "positive":
