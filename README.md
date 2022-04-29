@@ -12,6 +12,14 @@ Project to monitor and analyze loud sounds (ex. neighborhood roosters)
  - Remote file storage or metrics aggregator endpoint (TIG stack?)
  - python3, tensorflow
 
+## Process
+ - Record sample file(s) containing target sound (audio.mp3)
+ - Label (labels.json) examples of target sound in sample file(s)
+ - Train the model and generate signatures
+ - Setup systemd service to monitor and log on boot
+   - v1: output positive identifications to daily log file (wc -l for count)
+   - v2: create connector to push events to logging and analytics service
+
 ## Acknowledgements
  - This project would not have been possible without the previous work and detailed instructions of Fabio Manganiello
    - https://github.com/BlackLight/micmon
