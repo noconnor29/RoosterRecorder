@@ -1,0 +1,15 @@
+# Place in ~/.config/systemd/user/roostermonitor.service
+# Register with: systemctl --user enable roostermonitor.service  
+
+[Unit]
+Description=Monitor to detect rooster crows
+Requires=network.target sound.target
+After=network.target sound.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/rooster_recorder/rooster_recorder.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
