@@ -3,7 +3,7 @@ Project to monitor and analyze loud sounds (ex. neighborhood roosters)
 
 ## Objectives
  - [X] automatically and accurately distinguish target sounds from background noise
- - [ ] log data to create statistics about event frequency 
+ - [X] log data to create statistics about event frequency 
  - [ ] use data and statistics to generate trends and charts
 
 ## Requirements
